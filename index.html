@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assaingment-06</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/dcfface11d.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!--Nav bar start here-->
+        <nav class=" flex justify-between items-center w-11/12 mx-auto py-4"> 
+            <div class="flex items-center gap-4">
+                <img src="./assets/logo.webp" alt="">
+                <h class="text-xl text-black font-bold">Peddy</h3>
+            </div>
+            <div class="sm:hidden lg:flex">
+                <ul class=" lg:flex gap-4 list-none ">
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Contact</li>
+                    
+                </ul>
+            </div>
+            <div>
+                <img class="w-10" src="https://image.shutterstock.com/image-vector/profile-user-avatar-minus-search-260nw-2393607617.jpg" alt="">
+            </div>
+        </nav> <!--Nav bar end here-->
+
+       <!--Banner part start here-->
+       <section class="w-11/12 mx-auto flex flex-col justify-center items-center gap-4">
+        <div class="flex  justify-center items-center gap-2">
+
+            <h3 class="text-2xl font-bold text-[#5A5A5A]">Bringing Families Together</h3>
+            <img class="h-6 w-6" src="https://img.icons8.com/?size=48&id=QzXmSAP6522k&format=gif" alt="">
+            
+        </div>
+        <div class="text-center mt-6">
+            <h1 class="text-5xl text-black font-bold">Your Path to Adoption <br>Start Here</h1>
+            <p class="text-sm text-[#131313] mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <button onclick="location.href='#main_section'" class="w-[162px] h-[56px] bg-[#0E7A81] mt-6 border border-solid border-[#64A7AB] rounded-lg  text-lg text-white">View More</button>
+        </div>
+        <div>
+            <img src="./assets/pet.webp" alt="">
+        </div>
+     
+                 
+       </section>
+       <!--Banner part end here-->
+       <section class="w-11/12 text-center mx-auto mt-10 mb-10">
+        <h1 class="text-3xl font-bold text-black mb-6 ">Adopt Your Best Eriend</h1>
+        <p class="text-sm text-[#5A5A5A]">
+            It is a long established fact that a reader will be distracted by the readable content of a page <br> when looking at its layout. The point of using Lorem Ipsum is that it has a.
+        </p>
+
+
+       </section>
+       
+       <!--Category Button container start here-->
+       <section id="category" class="w-11/12 flex flex-col sm:flex-row md:flex-row lg:flex-row justify-between items-center mx-auto gap-4">
+          
+       
+       </section>
+
+    </header>
+    <main id="main_section">
+        <section class="w-11/12 mx-auto flex sm:flex-col lg:flex-row justify-between items-center my-10 ">
+            <h1 class="font-bold text-2xl">Best Deal For You</h1>
+            <button onclick="sort()" id="sort" class="w-[152px] h-[46px] bg-[#0E7A81] mt-6 border border-solid border-[#64A7AB] rounded-lg  text-lg text-white">Sort by Price</button>
+            
+         </section>
+    <section class="w-11/12 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[repeat(3,1fr)_1fr] auto-rows-auto gap-4">
+        <!--all pets container start here-->
+       
+            <section id="pets" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-3">
+
+            </section>
+
+            <section  class=" col-span-1 sm:col-span-2 md:col-span-3 lg:col-start-4 row-span-1 sm:row-span-2 md:row-span-3 border-2 border-solid border-base-200 p-4 text-center">
+                <div id="liked" class="flex flex-wrap row-gap-4" >
+                
+
+                </div>
+
+            </section>
+         
+        
+        <!--Product container end here-->
+    </section>
+    <!-- Open the modal using ID.showModal() method  "    -->
+<!-- Open the modal using ID.showModal() method -->
+<button id="showModal" class="btn hidden" onclick="my_modal_5.showModal()">Details</button>
+<dialog id="my_modal_5" class="">
+  <div class="">
+    <div class=" mx-6 my-6 " id="modal-content"> 
+
+    </div>
+    
+    <div class="modal-action w-full">
+
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn w-[600px] mr-6 mb-6">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+<div class="flex items-center justify-center ">
+    <span id="spiner" class="loading loading-bars loading-lg hidden "></span>
+</div>
+
+<button id="showModal2" class="btn hidden" onclick="my_modal_2.showModal()">Details</button>
+<dialog id="my_modal_2" class="">
+  <div class="">
+    <div class=" mx-6 my-6 " id="modal-content2"> 
+
+    </div>
+    
+    <div class="modal-action w-full">
+
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn w-[600px]  mb-6">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<!-- Open the modal using ID.showModal() method -->
+
+</main>
+
+<footer id="footer" class="footer bg-black text-base-content p-10 ">
+    <nav>
+      <div class="flex items-center gap-4 mb-4">
+        <img src="./assets/logo.webp" alt="">
+        <h1 class="text-white text-xl font-bold ">Peddy</h1>
+      </div>
+      <div class="footer-text text-white">
+        
+        <p>
+            Location: 123 Street Name, City,Dhaka-1200
+          </p>
+          <p>Phon: +88019191</p>
+          <p>Email:example12@gmail.com</p>
+          <p>Openingshours:9.00AM-5.00PM</p>
+      </div>
+      <div class="flex gap-4">
+      
+        <a class="link link-hover"><i class=" fa-brands fa-facebook " style="color: rgba(50, 151, 245, 0.863);"></i></a>
+        <a class="link link-hover"><i style="color:whitesmoke;" class=" fa-brands fa-x-twitter"></i></a>
+        <a class="link link-hover"><i style="color: rgba(255, 38, 0, 0.966);" class="fa-brands fa-youtube"></i></a>
+        <a class="link link-hover"><i style="color: rgba(255, 145, 0, 0.952); " class="fa-brands fa-instagram"></i></a>
+        
+      </div>
+    </nav>
+    <nav class="text-white">
+      <h6 class="footer-title">UsefulLinks</h6>
+      <a class="link link-hover">Home</a>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Animals</a>
+      <a class="link link-hover">Foundation</a>
+      <a class="link link-hover">Contact</a>
+    </nav>
+ 
+    <form class="flex flex-col gap-4">
+      
+      <fieldset class="form-control w-80">
+        <label class="label">
+            <h6 class="footer-title text-white pl-4 ">Drop a Message</h6>
+          
+        </label>
+        <div class="flex flex-col  gap-4 w-[240px] h-[240px] sm:mx-auto">
+          <input
+            type="text"
+            placeholder="Enter your email"
+            class="input input-bordered " />
+          <button class="btn btn-primary ">Subscribe</button>
+        </div>
+      </fieldset>
+    </form>
+  </footer>
+    
+    <script src="./script/index.js"></script>
+</body>
+</html>
