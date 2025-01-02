@@ -224,11 +224,14 @@ const loadAllPets = () => {
         
         showModal.click()
         dtailsContainer.innerHTML=`
-        <div class="w-full">
-        <img class="w-[600px] h-[300px] object-cover" src="${data.image}">
+        <div>
+        <img class="w-[600px] h-[250px] object-cover" src="${data.image}">
         </div>
-  <div class="flex flex-col row-gap-4 border-b-2 border-base-200 mb-6 pl-2 ">
+    
+    <div class="flex flex-col row-gap-4 border-b-2 border-base-200  pl-2 ">
     <h2 class="text-xl text-bold mb-2">${data.pet_name}</h2>
+    <div class="flex gap-4">
+    <div>
     <div class="flex gap-2 mb-2">
     <img class="w-5 object-cover" src="https://img.icons8.com/?size=80&id=6C93MhII3kih&format=png">
     
@@ -258,8 +261,23 @@ const loadAllPets = () => {
     ${
      data.price==null?`<p>Price:Not Available</p>`  :`<p>Price:${data.price}</p>`
     }
-     <img class="w-4" src="https://img.icons8.com/?size=32&id=15919&format=png">
+     <img class="w-4" src="https://img.icons8.com/?size=32&id=15919&format=png"/>
     </div>
+    
+    </div>
+     <div class=" flex flex-row gap-2 mb-2">
+        <img class="w-5 h-5" src="https://img.icons8.com/?size=50&id=962&format=png">
+    ${
+    
+     data.vaccinated_status==null?`<p>Price:Not Available</p>`  :`<p>vaccinated Status: ${data.vaccinated_status}</p>`
+    }
+     
+    </div>
+   
+    </div>
+     <div class="w-[600px] ">
+      <h1>Details Information</h1>
+      <p class="flex flex-wrap text-sm pet-details">${data.pet_details}</p>
     </div>
         
         `
